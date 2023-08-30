@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="./Styles/index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="resultcontainer">
+            <div class="tag">
+                <p class="heading">Rock</p>
+                <p class="heading">Paper</p>
+                <p class="heading">Scissors</p>
+            </div>
+            <div class="scores">
+                <div class="compscore">
+                    <p>Computer Score</p>
+                    <h1 id="pcscore">0</h1>
+                </div>
+                <div class="compscore">
+                    <p>Your Score</p>
+                    <h1 id="userscore">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="playarea" id="playArea">
+            <div class="symbols">
+                <div class="two-icons">
+                    <div class="rock" id="rock">
+                        <img src="./Assets/rock.png" alt="rock" class="game-icon" id="rock" onclick="handleImageClick(event)">
+                    </div>
+                    <div class="scissor">
+                        <img src="./Assets/scissor.png" alt="scissor" class="scissor-icon game-icon" id="scissor" onclick="handleImageClick(event)">
+                    </div> 
+                </div>
+                <div class="paper">
+                    <img src="./Assets/paper.png" alt="paper" class="paper-icon game-icon" onclick="handleImageClick(event)">
+                </div>
+                <div class="lines">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>  
+        </div>
+
+        <section class="results_hidden hidden" id="showResult">
+            <div class="you-picked picked">
+                <p class="yourChoice">YOU PICKED</p>
+                <div class="" id="resulticonone">
+                    <img src="" alt="" class="" id="firstimg">
+                </div>
+            </div>
+            <div class="play-again-section">
+                <p class="youwin" id="wonorloss">YOU WIN</p>
+                <p class="againpc" id="againstpc" >AGAINST PC</p>
+                <button class="playagainbtn" onclick="playAgain()">PLAY AGAIN</button>
+            </div>
+            <div class="pc-picked picked">
+                <p>PC PICKED</p>
+                <div class="stack" id="resulticontwo">
+                    <img src="" alt="" class="" id="secondimg">
+                </div>
+            </div>
+        </section>
+
+
+        <div class="rules">
+            <div class="rule-next">
+                <button class="rules-btn" onclick="showRules()">RULES</button>
+                <button class="next-btn hidden" id="next-btn"><a href="Congrats.html" class="nextpage">NEXT</a></button>
+            </div>
+            <div class="rulescontainer hidden" id="rulesid">
+                <div class="ruleslist">
+                    <p>GAME RULES</p>
+                    <ul>
+                        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                        <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or "rock, paper, scissors."</li>
+                        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+                        <li>If both players lay down the same hand, each player lays down another hand.</li>
+                    </ul>
+                </div>
+                <div class="crossbtnsection" onclick="hideRules()">
+                    <div class="cross-btn">X</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
