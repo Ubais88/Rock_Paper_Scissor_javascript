@@ -2,10 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
 
-
+/* bg color for whole body */
 body{
     background-color: #8CC461;
 }
+
+/* main container */
 .container{
     display: flex;
     flex-direction: column;
@@ -13,6 +15,8 @@ body{
     margin-top: 1rem;
 }
 
+/* top result container
+ */
 .resultcontainer{
     display: flex;
     justify-content: space-between;
@@ -24,6 +28,7 @@ body{
     border: 2px solid #fff;
 }
 
+/* main heading top */
 .tag{
     padding: 0 0.8rem;
 }
@@ -38,6 +43,7 @@ body{
     margin: 0;
 }
 
+/* pc and user score */
 .scores{
     display: flex;
     align-items: center;
@@ -76,15 +82,17 @@ body{
     }
 }
 
+/* play area  */
 .playarea{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
     width: 100vh;
-    animation: winner 1s ease-out;
+    animation: winner 1s ease;
 }
 
+/* images of rock paper and scissor */
 .symbols{
     display: flex;
     flex-direction: column;
@@ -110,6 +118,7 @@ body{
     border-radius: 50%;
 }
 
+/* border for game symbols */
 .rock{
     border: 16px solid #0074B6;
 }
@@ -120,6 +129,7 @@ body{
     border: 16px solid #FFA943;
 }
 
+/* background connected lines */
 .lines{
     width: 380px;
     position: absolute;
@@ -153,6 +163,7 @@ body{
     margin: 30px -10px 0px 125px;
 }
 
+/* rules button alignment */
 .rules{
     display: flex;
     width: 100vw;
@@ -161,6 +172,7 @@ body{
 
 }
 
+/* result area  */
 .results_hidden{
 
     display: flex;
@@ -199,6 +211,7 @@ body{
     }
 }
 
+/* play again button when result announced */
 .play-again-section{
     display: flex;
     flex-direction: column;
@@ -240,15 +253,18 @@ body{
     cursor: pointer;
 }
 
+
+/* rules container */
 .rulescontainer{
     width: 280px;
     position: absolute;
     border-radius: 13px;
     top: 210px;
     right: 18px;
-    animation: winner 1s ease-out;
+    animation: winner 1s ease;
 }
 
+/* rules list */
 .ruleslist{
         background-color: #004429;
         border-radius: 13px;
@@ -292,6 +308,7 @@ body{
     }
 }
 
+/* rules close btn */
 .crossbtnsection{
     height: 50px;
     width: 50px;
@@ -327,7 +344,7 @@ body{
      position: absolute;
      top: 570px;
 }
-
+/* rules btn and next button for hurry page */
 .rules-btn,.next-btn{
     font-family: Roboto;
     font-size: 21px;
@@ -350,12 +367,22 @@ body{
     background-color: inherit;
 }
 
-
-#resulticonone,#resulticontwo{
+/* shadow for winner side */
+.shadow{
     box-shadow:  0 0 0 35px #3b672076 ,0 0 0 70px #1da82b9e ,0 0 0 100px #2E9A2563;
-    animation: winner 1s ease-out;
+    animation: shadow 2s ease;
 }
+/* animation */
+@keyframes shadow {
+    from {
+      box-shadow: none;
+    }
+    to {
+      box-shadow:  0 0 0 35px #3b672076 ,0 0 0 70px #1da82b9e ,0 0 0 100px #2E9A2563;
+    }
+  }
 
+/* animation for play gain or open rules list */
 @keyframes winner {
   from {
     opacity: 0;

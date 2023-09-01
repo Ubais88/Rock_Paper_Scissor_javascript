@@ -82,10 +82,12 @@ function handleImageClick(event) {
 
     //  logic for generating winner 
     // Its tie situtation
+    console.log(document.getElementById("playAgainButton").innerHTML)
     if (userpick === computerpick){
-        console.log("tie")
+        console.log("Tie")
         showResult.classList.remove('hidden');
         wonorlosss.innerHTML = "TIE UP"
+        document.getElementById("playAgainButton").innerHTML = "REPLAY"
         againstpc.classList.add('hide');
     }  
     //  user win the game
@@ -98,6 +100,7 @@ function handleImageClick(event) {
         showResult.classList.remove('hidden');
         nextbtn.classList.remove('hidden');
         wonorlosss.innerHTML = "YOU WIN";
+        resulticonone.classList.add("shadow")
         // update userScore
         changeUserScore();
       } 
@@ -106,6 +109,7 @@ function handleImageClick(event) {
         console.log("computer win");
         changePcScore();
         showResult.classList.remove('hidden');
+        resulticontwo.classList.add("shadow")
         wonorlosss.innerHTML = "YOU LOST"
       }
     }
@@ -117,6 +121,7 @@ function playAgain(){
     showResult.classList.add('hidden');
     var nextbtn = document.getElementById('next-btn');
     nextbtn.classList.add('hidden');
+    document.getElementById("playAgainButton").innerHTML = "PLAY AGAIN"
 }
 
 // logic to show all the rules

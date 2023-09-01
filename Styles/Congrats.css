@@ -2,10 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
 
-
 body{
-    height: 100%;
+    height: 100vh;
     background-color: #8CC461;
+    overflow:hidden;
 }
 
 .container{
@@ -13,18 +13,126 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5vh;
 }
 
-.decoration{
+.decoration_star{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 6vh;
+}
+
+.stars:nth-child(1){
+    width: 32px;
+    height: 32px;
+    position: relative;
+    left: 110px;
+    top: 240px;
+}
+.stars:nth-child(2){
+    width: 115px;
+    height: 115px;
+    position: relative;
+    left: -30px;
+    top: 120px;
+}
+.stars:nth-child(3){
+    width: 68px;
+    height: 68px;
+    position: relative;
+    left: -40px;
+    top: 60px;
+}
+.stars:nth-child(4){
+    width: 32px;
+    height: 32px;
+    position: relative;
+    left: -50px;
+    top: 10px;
+}
+.stars:nth-child(5){
+    width: 32px;
+    height: 32px;
+    position: relative;
+    left: 10px;
+    top:45px ;
+}
+.stars:nth-child(6){
+    width: 103px;
+    height: 103px;
+    position: relative;
+    left: 50px;
+    top: 0px;
+
+}
+.stars:nth-child(7){
+    width: 32px;
+    height: 32px;
+    position: relative;
+    left: 60px;
+    top: 100px;
+}
+.stars:nth-child(8){
+    width: 130px;
+    height: 130px;
+    left: -30px;
+    top: 150px;
+    position: relative;
+}
+
+.stars:before {
+    transform: rotate(35deg);
+}
+
+.stars:after {
+    transform: rotate(-35deg);
+}
+
+.stars:nth-child(even) {
+    animation: blink 1.5s infinite alternate;
+}
+
+.stars:nth-child(odd) {
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+/* .stars{
+    animation: rotateStar 5s ease infinite;
+} */
+
+@keyframes rotateStar {
+    50%{
+        transform: rotate(180deg);
+    }
+}
+
+.decoration_trophy{
+    position: absolute;
+    top: 170px;
+}
+.trophy{
+    width: 150px;
+    height: 150px;
+}
+
+.textsection{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8vh;
-}
-
-.trophy{
     position: absolute;
-    margin-top: 100px;
+    top: 300px;
+    margin-top: 20px;
 }
 
 .text1{
@@ -88,7 +196,7 @@ a{
     background-color: inherit;
     color: #fff;
     padding: 7px 20px;
-    margin-top: 380px;
+    margin-top: 360px;
 }
 
 /* rules */
@@ -100,6 +208,7 @@ a{
     border-radius: 13px;
     top: 210px;
     right: 18px;
+    animation: winner 1s ease;
 }
 
 .ruleslist{
@@ -172,3 +281,13 @@ a{
 .hidden{
     display: none;
 }
+
+/* animation for play gain or open rules list */
+@keyframes winner {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
